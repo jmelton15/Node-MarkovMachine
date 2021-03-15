@@ -65,7 +65,6 @@ class MarkovMachine {
             } 
             startingChain = startingChain + " " + nextWord;
         }
-        console.log(" \n")
         return startingChain;
     }
 }
@@ -100,4 +99,4 @@ function getNextWord(startingChain,markovChains,index) {
     return nextWord;
 }
 
-module.exports = {MarkovMachine};
+module.exports = {MarkovMachine,getNextWord};

@@ -38,12 +38,12 @@ async function run() {
     if (process.argv[2].match(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)) {
         let text = await webCat(process.argv[2]);
         let mm = new MarkovMachine(text);
-        console.log(mm.makeText(200));
+        console.log(mm.makeText());
     }
     else {
         let text = await cat(process.argv[2]);
         let mm = new MarkovMachine(text);
-        console.log(mm.makeText(200));
+        console.log(mm.makeText());
     }
 }
 run();
